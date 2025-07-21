@@ -2,7 +2,11 @@ import random
 from datetime import datetime, timedelta
 
 # Liste des user_ids disponibles (d'après ta liste)
-user_ids = [37, 38, 39, 40, 41, 42, 43, 44, 45, 47]
+user_ids = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
+            11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+            21, 22, 23, 24, 25, 26, 27, 28, 29, 30,
+            31, 32, 33, 34, 35, 36, 37, 38, 39, 40,
+            41, 42, 43, 44, 45, 47]
 
 # Types de machines pour varier les noms
 machine_types = ['PC', 'LAPTOP', 'DESKTOP', 'WORKSTATION', 'NOTEBOOK']
@@ -30,7 +34,7 @@ def generate_sql(filename="fake_user_logs.sql"):
     with open(filename, "w", encoding="utf-8") as f:
         f.write("INSERT INTO user_logs (user_id, machine_name, ip, login_time, logout_time) VALUES\n")
         lines = []
-        for _ in range(100):
+        for _ in range(500):
             user_id = random.choice(user_ids)
             machine_name = f"{user_id}-{random.choice(machine_types)}"
             ip = random_ip()
