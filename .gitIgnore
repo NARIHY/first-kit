@@ -1,3 +1,6 @@
 *.xls
 *.xlsx
 *.sql
+*.html
+*.pdf
+__pycache__/
